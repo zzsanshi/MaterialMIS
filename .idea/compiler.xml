@@ -9,5 +9,8 @@
         <module name="MaterialMIS" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="MaterialMIS" target="14" />
+    </bytecodeTargetLevel>
   </component>
 </project>
