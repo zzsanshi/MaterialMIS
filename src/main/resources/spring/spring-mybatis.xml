@@ -12,7 +12,6 @@
                         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
     <!-- 自动扫描 -->
     <context:component-scan base-package="com.project.dao" />
-
     <!-- 引入数据源的配置文件 -->
     <bean id="propertyConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -40,8 +39,9 @@
     <!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-<!--        &lt;!&ndash; 自动扫描mapping.xml文件 &ndash;&gt;-->
-<!--        <property name="mapperLocations" value="classpath:/com/project/dao" ></property>-->
+        <!-- 自动扫描mapping.xml文件 -->
+        <property name="mapperLocations" value="classpath:spring/mapper.xml" ></property>
+
         <!--开启redis缓存 -->
         <property name="configurationProperties">
             <props>
@@ -61,13 +61,9 @@
     </bean>
     <!--配置IAccountdao接口所在包-->
 
-
 <!--    &lt;!&ndash; (事务管理)transaction manager, use JtaTransactionManager for global tx &ndash;&gt;-->
 <!--    <bean id="transactionManager"  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
 <!--        <property name="dataSource" ref="dataSource" />-->
 <!--    </bean>-->
-
-
-
-
 </beans>
+

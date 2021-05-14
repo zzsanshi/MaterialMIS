@@ -9,6 +9,7 @@ http://www.springframework.org/schema/aop http://www.springframework.org/schema/
 http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
     <import resource="classpath:/spring/spring-mybatis.xml"/>
+
     <!-- 定义事务管理器 -->
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
@@ -23,7 +24,7 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
             <tx:method name="query*" read-only="true"/>
             <tx:method name="get*" read-only="true"/>
             <tx:method name="find*" read-only="true"/>
-            <tx:method name="select*" read-only="true"/>
+            <tx:method name="select*" read-only="true" rollback-for="Error.class"/>
             <!--其他方法使用默认事务策略 -->
             <tx:method name="*" isolation="DEFAULT"/>
         </tx:attributes>
@@ -38,6 +39,8 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
         <!--将定义好的事务处理策略应用到上述的切入点 -->
         <aop:advisor advice-ref="txAdvice" pointcut-ref="myPointcut"/>
     </aop:config>
+
+    <tx:annotation-driven transaction-manager="transactionManager" />
 
 
 </beans>
