@@ -16,16 +16,14 @@ public class AccountServiceImpl  implements AccountService {
     private IAccountdao iaccountdao;
 
     @Override
-    @Transactional
     public List<Account> findAll() {
         System.out.println("Service业务层：查询所有账户...");
-
         return iaccountdao.findAll();
     }
+
     @Override
-    @Transactional(propagation = Propagation.REQUIRED,rollbackFor = {RuntimeException.class,Error.class})
     public void saveAccount(Account account) {
         System.out.println("Service业务层：保存帐户...");
-        iaccountdao.saveAccount(account);  //调用service中的saveAccount(account)方法
+//        iaccountdao.saveAccount(account);  //调用service中的saveAccount(account)方法
     }
 }

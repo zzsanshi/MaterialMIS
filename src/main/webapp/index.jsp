@@ -13,7 +13,8 @@
 <body>
 
 <a href="account/findAll">测试查询</a>
-
+<a href="outAContract/findAll">测试查询2</a>
+<a href="inAContract/findAll">测试查询3</a>
 <h3>测试包</h3>
 
 <form action="account/save" method="post">

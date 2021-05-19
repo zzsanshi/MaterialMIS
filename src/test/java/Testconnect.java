@@ -7,7 +7,7 @@ public class Testconnect {
     @Test
     public void run1() {
         String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-        String DB_URL = "jdbc:mysql://121.248.201.216:3306/cacheTest?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
+        String DB_URL = "jdbc:mysql://121.248.201.216:3306/MIS?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
 
         // 数据库的用户名与密码，需要根据自己的设置
         String USER = "root";
@@ -29,7 +29,7 @@ public class Testconnect {
             System.out.println(" 实例化Statement对象...");
             stmt = conn.createStatement();
             String sql;
-            sql = "SELECT * FROM student";
+            sql = "SELECT * FROM base_user";
             ResultSet rs = stmt.executeQuery(sql);
 
             // 展开结果集数据库
@@ -69,7 +69,11 @@ public class Testconnect {
         }
         System.out.println("Goodbye!");
 
-
+    }
+    @Test
+   public void run2() {
+        Jedis jedis = new Jedis("121.248.201.216",6379);
+        System.out.println(jedis.ping());
     }
 
 

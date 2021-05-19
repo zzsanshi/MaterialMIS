@@ -23,7 +23,7 @@ public class AccountController {
         System.out.println("Controller表现层：查询所有账户...");
         // 调用service的方法
         List<Account> list = accountService.findAll();
-        model.addAttribute("list",list);
+        model.addAttribute("list1",list);
         return "list";
     }
 

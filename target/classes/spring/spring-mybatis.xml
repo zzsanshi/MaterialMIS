@@ -12,9 +12,6 @@
                         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
     <!-- 自动扫描 -->
     <context:component-scan base-package="com.project.dao" />
-
-
-
     <!-- 引入数据源的配置文件 -->
     <bean id="propertyConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -52,7 +49,7 @@
                 <!--查询时，关闭关连对象即时加载以提高性能-->
                 <prop key="lazyLoadingEnabled">false</prop>
                 <!-- 设置关联对象加载的形态，此处为按需要加载字段（加载字段由sql决定），不会加载关联表的所有字段，以提高性能-->
-                <prop key="aggressiveLazyLoading">true</prop>
+                <prop key="aggressiveLazyLoading">false</prop>
             </props>
         </property>
     </bean>
@@ -62,8 +59,6 @@
         <property name="basePackage" value="com.project.dao" />
     </bean>
     <!--配置IAccountdao接口所在包-->
-
-
 
 <!--    &lt;!&ndash; (事务管理)transaction manager, use JtaTransactionManager for global tx &ndash;&gt;-->
 <!--    <bean id="transactionManager"  class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->

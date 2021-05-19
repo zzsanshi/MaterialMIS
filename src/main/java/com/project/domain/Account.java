@@ -2,12 +2,14 @@ package com.project.domain;
 
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class Account implements Serializable {
-    private  Integer id;
+    private Integer id;
+    private String password;
     private String name;
-    private Double money;
-
+    private Date createTime;
+    private Date updateTime;
 
     public Integer getId() {
         return id;
@@ -15,6 +17,14 @@ public class Account implements Serializable {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getName() {
@@ -25,21 +35,30 @@ public class Account implements Serializable {
         this.name = name;
     }
 
-    public Double getMoney() {
-        return money;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setMoney(Double money) {
-        this.money = money;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 
     @Override
     public String toString() {
         return "Account{" +
                 "id=" + id +
+                ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
-                ", money=" + money +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
                 '}';
     }
-
 }

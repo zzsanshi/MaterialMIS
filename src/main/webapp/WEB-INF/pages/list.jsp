@@ -8,7 +8,7 @@
 </head>
 <body>
 <h2>查询所有的账户</h2>
-<c:forEach items="${list}" var="account">
+<c:forEach items="${list1}" var="account">
     ${account.name}
 </c:forEach>
 </body>
