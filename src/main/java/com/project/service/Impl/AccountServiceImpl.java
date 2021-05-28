@@ -4,6 +4,7 @@ import com.project.dao.IAccountdao;
 import com.project.domain.Account;
 import com.project.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service("accountService")
+@Async
 public class AccountServiceImpl  implements AccountService {
     @Autowired
     private IAccountdao iaccountdao;
