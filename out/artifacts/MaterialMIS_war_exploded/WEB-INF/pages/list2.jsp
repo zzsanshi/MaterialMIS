@@ -7,8 +7,8 @@
     <title>Title</title>
 </head>
 <body>
-<h2>查询所有的账户</h2>
-<c:forEach items="${list}" var="contract">
+<h2>查询所有入库</h2>
+<c:forEach items="${list2}" var="contract">
     ${contract.name}
 </c:forEach>
 </body>

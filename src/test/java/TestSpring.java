@@ -22,21 +22,7 @@ public class TestSpring {
 
         @Test
         public void run2() throws Exception {
-            InputStream in = Resources.getResourceAsStream("spring/spring-mybatis.xml");
 
-            SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(in);
-
-            SqlSession session = factory.openSession();
-
-            IAccountdao dao = session.getMapper(IAccountdao.class);
-
-            List<Account> list = dao.findAll();
-            for (Account account: list ) {
-                System.out.println(account);
-            }
-
-            session.close();
-            in.close();
         }
 
 }

@@ -5,11 +5,19 @@ import com.project.redisUtils.JedisUtils;
 import org.apache.ibatis.cache.Cache;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
+//@Configuration
+////开启缓存注解支持
+//@EnableCaching
 public class RedisCache implements Cache {
 
     private static Logger logger = LoggerFactory.getLogger(RedisCache.class);

@@ -12,11 +12,12 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service("accountService")
-@Async
+
 public class AccountServiceImpl  implements AccountService {
     @Autowired
     private IAccountdao iaccountdao;
 
+    //@Async
     @Override
     public List<Account> findAll() {
         System.out.println("Service业务层：查询所有账户...");

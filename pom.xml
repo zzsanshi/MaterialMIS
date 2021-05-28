@@ -87,6 +87,7 @@
             <artifactId>spring-context-support</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
@@ -105,6 +106,11 @@
             <scope>provided</scope>
         </dependency>
         <!--spring核心包 -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>1.7.1.RELEASE</version>
+        </dependency>
 
         <!--spring单元测试依赖 -->
         <dependency>
@@ -167,6 +173,11 @@
             <groupId>org.mybatis.caches</groupId>
             <artifactId>mybatis-redis</artifactId>
             <version>1.0.0-beta2</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.cache</groupId>
+            <artifactId>cache-api</artifactId>
+            <version>1.1.1</version>
         </dependency>
         <!-- 引入redis依赖 -->
 

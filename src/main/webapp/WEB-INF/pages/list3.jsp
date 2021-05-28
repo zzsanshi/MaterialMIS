@@ -7,7 +7,7 @@
     <title>Title</title>
 </head>
 <body>
-<h2>查询所有的账户</h2>
+<h2>查询所有的出库</h2>
 <c:forEach items="${list3}" var="contract">
     ${contract.name}
 </c:forEach>
