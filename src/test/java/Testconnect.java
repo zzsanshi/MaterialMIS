@@ -73,6 +73,7 @@ public class Testconnect {
     @Test
    public void run2() {
         Jedis jedis = new Jedis("121.248.201.216",6379);
+        jedis.auth("admin");
         System.out.println(jedis.ping());
     }
 

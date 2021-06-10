@@ -17,11 +17,13 @@ public class TestSpring {
     public void run1(){
         ApplicationContext ac = new ClassPathXmlApplicationContext("classpath:spring/applicationContext.xml");
         AccountService as = (AccountService) ac.getBean("accountService");
-        as.findAll();
+       // as.findAll();
     }
 
         @Test
         public void run2() throws Exception {
+            ApplicationContext c=new ClassPathXmlApplicationContext("classpath:spring/applicationContext.xml");
+            System.out.println("1");
 
         }
 

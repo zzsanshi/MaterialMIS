@@ -27,7 +27,13 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
         <property name="suffix" value=".jsp"></property>
     </bean>
     <!-- 以上是原生态的ssm配置 -->
-
+<!--    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">-->
+<!--        <property name="messageConverters">-->
+<!--            <list>-->
+<!--                <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
     <!-- 配置第二个视图解析器 -->
     <!-- <bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
     <property name="order" value="1"></property>

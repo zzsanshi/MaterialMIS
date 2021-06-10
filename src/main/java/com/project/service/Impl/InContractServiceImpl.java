@@ -5,6 +5,7 @@ import com.project.dao.IOutContract;
 import com.project.domain.InContract;
 import com.project.service.InContractService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,7 @@ public class InContractServiceImpl implements InContractService {
 
     @Override
     //@Async
+    @Cacheable(value="InContract",key="'InContract'")
     public List<InContract> findAll() {
 
         return iInContractDao.findAll();

@@ -4,6 +4,7 @@ import com.project.dao.IOutContract;
 import com.project.domain.OutContract;
 import com.project.service.OutContractService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,10 +19,9 @@ public class OutContractServiceImpl implements OutContractService {
 
     //@Async
     @Override
+    @Cacheable(value="OutContract",key="'OutContract'")
     public List<OutContract> findAll() {
         System.out.println("Service业务层：查询所有账户...");
         return iOutContract.findAll();
     }
-
-
 }

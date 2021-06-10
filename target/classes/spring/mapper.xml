@@ -2,6 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.project.dao.IAccountdao">
     <!-- 引入自定义缓存类实现cache接口 -->
-    <cache eviction="LRU"  type="com.project.cache.RedisCache"/>
+<!--    <cache eviction="LRU"  type="com.project.cache.RedisCache"/>-->
 <!--    <cache  type=" type="org.mybatis.cache.MybatisRedisCache"/>-->
 </mapper>
