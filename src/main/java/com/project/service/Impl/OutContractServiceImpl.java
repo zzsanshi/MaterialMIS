@@ -16,7 +16,6 @@ import java.util.List;
 public class OutContractServiceImpl implements OutContractService {
     @Autowired
     IOutContract iOutContract;
-
     //@Async
     @Override
     @Cacheable(value="OutContract",key="'OutContract'")
