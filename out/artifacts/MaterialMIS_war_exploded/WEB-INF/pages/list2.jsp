@@ -10,6 +10,7 @@
 <h2>查询所有入库</h2>
 <c:forEach items="${list2}" var="contract">
     ${contract.name}
+    ${contract.id}
 </c:forEach>
 </body>
 </html>

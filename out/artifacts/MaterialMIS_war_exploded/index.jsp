@@ -19,8 +19,19 @@
 
 <form action="account/save" method="post">
     姓名：<input type="text" name="name" /><br/>
-    金额：<input type="text" name="money" /><br/>
-    <input type="submit" value="保存"/><br/>
+    密码：<input type="text" name="password" /><br/>
+    <input type="submit" value="添加"/><br/>
+</form>
+
+<form action="account/delete" method="post">
+    id：<input type="text" name="id" /><br/>
+    <input type="submit" value="删除"/><br/>
+</form>
+
+<form action="account/update" method="post">
+    id：<input type="text" name="id" /><br/>
+    密码：<input type="text" name="password" /><br/>
+    <input type="submit" value="修改"/><br/>
 </form>
 
 </body>

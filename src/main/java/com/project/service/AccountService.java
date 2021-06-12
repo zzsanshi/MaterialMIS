@@ -12,4 +12,8 @@ public interface  AccountService {
 
     // 保存帐户信息
     public void saveAccount(Account account);
+    //删除账户
+    public void deleteAccount(Account account);
+
+    public void updateAccount(Account account);
 }

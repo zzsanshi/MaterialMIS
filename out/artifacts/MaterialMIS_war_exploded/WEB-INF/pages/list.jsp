@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
@@ -9,7 +10,8 @@
 <body>
 <h2>查询所有的账户</h2>
 <c:forEach items="${list1}" var="account">
-    ${account.name}
+   姓名:${account.name}   id:${account.id}<br/>
+    <br/>
 </c:forEach>
 </body>
 </html>
