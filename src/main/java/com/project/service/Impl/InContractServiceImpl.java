@@ -21,7 +21,7 @@ public class InContractServiceImpl implements InContractService {
     //@Async
     @Cacheable(value="InContract",key="'InContract'")
     public List<InContract> findAll() {
-
+        System.out.println("Service业务层：查询所有账户...");
         return iInContractDao.findAll();
     }
 }

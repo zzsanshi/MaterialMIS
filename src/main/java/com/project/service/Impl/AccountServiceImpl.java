@@ -21,37 +21,41 @@ import java.util.List;
 @Service("accountService")
 //@Cacheable(value="account")
 //@EnableCaching
-public class AccountServiceImpl  implements AccountService {
+public class AccountServiceImpl implements AccountService {
     @Autowired
     private IAccountdao iaccountdao;
 
     //@Async
     @Override
     //@Cacheable(value="account",key="'account'+#id.toString()")
-    @Cacheable(value="account")
+    @Cacheable(value = "account")
     //@Cacheable
     public List<Account> findAll() {
         System.out.println("Service业务层：查询所有账户...");
-
         return iaccountdao.findAll();
     }
 
     @Override
-    @CachePut(value="account")
-    public void saveAccount(Account account) {
+    @CachePut(value = "account")
+    public Account saveAccount(Account account) {
         System.out.println("Service业务层：保存帐户...");
         iaccountdao.saveAccount(account);  //调用service中的saveAccount(account)方法
-    }
-    @Override
-    @CacheEvict(value="account")
-    public void deleteAccount(Account account) {
-        System.out.println("Service业务层：删除帐户...");
-        iaccountdao.deleteAccount(account);
+        return account;
     }
 
     @Override
-    public void updateAccount(Account account) {
+    @CacheEvict(value = "account", allEntries = true)
+    public void deleteAccount(Account account) {
+        System.out.println("Service业务层：删除帐户...");
+        iaccountdao.deleteAccount(account);
+        iaccountdao.incream();
+    }
+
+    @Override
+    @CachePut(value = "account")
+    public Account updateAccount(Account account) {
         System.out.println("Service业务层：更新帐户...");
         iaccountdao.updateAccount(account);
+        return account;
     }
 }

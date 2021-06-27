@@ -95,9 +95,9 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 <!--        <constructor-arg name="cacheNullValues" value="false"/>-->
         <!--注入redisTemplate-->
         <constructor-arg name="redisOperations" ref="redisTemplate"/>
-        <property name="defaultExpiration" value="60"/>
+        <property name="defaultExpiration" value="10"/>
     </bean>
-
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" p:maxUploadSize="500000"/>
 
 
 

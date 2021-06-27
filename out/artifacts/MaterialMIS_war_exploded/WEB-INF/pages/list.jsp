@@ -10,7 +10,7 @@
 <body>
 <h2>查询所有的账户</h2>
 <c:forEach items="${list1}" var="account">
-   姓名:${account.name}   id:${account.id}<br/>
+    姓名:${account.name}   id:${account.id}  密码:${account.password}<br/>
     <br/>
 </c:forEach>
 </body>

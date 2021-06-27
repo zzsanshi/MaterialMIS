@@ -11,9 +11,9 @@ public interface  AccountService {
     public List<Account> findAll();
 
     // 保存帐户信息
-    public void saveAccount(Account account);
+    public Account saveAccount(Account account);
     //删除账户
     public void deleteAccount(Account account);
 
-    public void updateAccount(Account account);
+    public Account updateAccount(Account account);
 }

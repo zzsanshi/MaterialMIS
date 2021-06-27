@@ -19,7 +19,9 @@ public class KeyGeneratorDemo implements KeyGenerator {
         //规定  本类名+方法名+参数名 为key
         StringBuilder sb = new StringBuilder();
         sb.append(o.getClass().getName());
+        sb.append("-");
         sb.append(method.getName());
+
 //        for (Object param : params) {
 //            sb.append(param.toString());
 //        }

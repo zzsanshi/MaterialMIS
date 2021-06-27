@@ -23,4 +23,8 @@ public interface IAccountdao {
 
     @Update("update base_user set password=#{password} where id = #{id}")
     public void updateAccount(Account account);
+
+    //解决删除数据后自增id问题
+    @Select("ALTER table base_user AUTO_INCREMENT = 1")
+    public void incream();
 }

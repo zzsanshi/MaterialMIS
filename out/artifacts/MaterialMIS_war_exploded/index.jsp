@@ -8,29 +8,31 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>初始页面</title>
 </head>
 <body>
 
 <a href="account/findAll">测试查询所有用户</a>
 <a href="inAContract/findAll">测试入库</a>
 <a href="outAContract/findAll">测试出库</a>
-<h3>测试包</h3>
+<a href="/page/save">上传</a>
+<a href="/page/down">下载</a>
 
+<h3>测试包</h3>
 <form action="account/save" method="post">
-    姓名：<input type="text" name="name" /><br/>
-    密码：<input type="text" name="password" /><br/>
+    姓名：<input type="text" name="name"/><br/>
+    密码：<input type="text" name="password"/><br/>
     <input type="submit" value="添加"/><br/>
 </form>
 
 <form action="account/delete" method="post">
-    id：<input type="text" name="id" /><br/>
+    id：<input type="text" name="id"/><br/>
     <input type="submit" value="删除"/><br/>
 </form>
 
 <form action="account/update" method="post">
-    id：<input type="text" name="id" /><br/>
-    密码：<input type="text" name="password" /><br/>
+    id：<input type="text" name="id"/><br/>
+    密码：<input type="text" name="password"/><br/>
     <input type="submit" value="修改"/><br/>
 </form>
 

@@ -9,8 +9,7 @@
 <body>
 <h2>查询所有入库</h2>
 <c:forEach items="${list2}" var="contract">
-    ${contract.name}
-    ${contract.id}
+    ${contract.name}--${contract.id}<br/>
 </c:forEach>
 </body>
 </html>
