@@ -61,6 +61,20 @@
                 <prop key="aggressiveLazyLoading">false</prop>
             </props>
         </property>
+        <!-- 配置分页插件 -->
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageHelper">
+                    <property name="properties">
+                        <value>
+                            dialect=mysql
+                            reasonable=true
+                        </value>
+                    </property>
+                </bean>
+            </array>
+        </property>
+
     </bean>
 
     <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
